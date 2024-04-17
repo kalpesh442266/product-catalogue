@@ -1,0 +1,162 @@
+.fields-wrapper {
+    padding: 24px;
+}
+
+.input-container {
+    display: flex;
+    margin: 0 0 8px 0;
+    align-items: center;
+}
+
+
+.input-wrapper {
+    flex: 0 0 66.33%;
+}
+
+.inputField {
+    border-radius: 4px;
+    margin: 0;
+    width: 100%;
+    height: 32px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, .65);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    transition: all .3s;
+    margin: 4px 0 4px 0;
+    outline: none;
+}
+
+.inputField:focus {
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+}
+
+.inputField.has-error {
+    border-color: #f5222d;
+    color: #f5222d;
+    outline: none;
+}
+
+.inputField.has-error:focus {
+    box-shadow: 0 0 0 2px rgba(245, 34, 45, .2);
+}
+
+/* label */
+.input-label {
+    font-size: 14px;
+    margin: 0 8px 0 2px;
+}
+
+.input-label:before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #f5222d;
+    font-size: 14px;
+    line-height: 1;
+    content: "*";
+}
+
+.label-wrapper {
+    flex: 0 0 33.33%;
+    text-align: right;
+}
+
+.error-message {
+    color: #f5222d;
+    min-height: 22px;
+    margin-top: -2px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 2px;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.show-error {
+    animation: slide-down 0.3s;
+}
+
+.hide-error {
+    animation: slide-up 0.3s;
+}
+
+/* buttons */
+
+.cancel-btn {
+    all: unset;
+    color: rgba(0, 0, 0, .65);
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+}
+
+.ok-btn {
+    all: unset;
+    background-color: #1890ff;
+    color: white;
+    margin-left: 8px;
+}
+
+
+.form-btn {
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, .015);
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.action-buttons {
+    border-top: 1px solid #e8e8e8;
+    text-align: right;
+    padding: 10px 16px;
+}
+
+
+@media only screen and (max-width: 575px) {
+    .remove-on-mobile {
+        display: none;
+    }
+
+    .input-container {
+        display: block;
+        margin: 0 0 8px 0;
+    }
+
+    .input-label {
+        display: block;
+        text-align: left;
+        padding: 0 0 8px 0;
+    }
+
+}

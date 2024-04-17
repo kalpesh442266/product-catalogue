@@ -1,0 +1,76 @@
+/* modal */
+.modal-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.65);
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+}
+
+.modal {
+  border-radius: 4px;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: auto;
+  background-color: white;
+  overflow: auto;
+  border-bottom: 4px;
+  animation-name: example;
+  animation-duration: 0.2s;
+}
+
+.modal.closing {
+  animation-name: closeModal;
+  animation-duration: 0.2s;
+}
+
+
+@keyframes example {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.title {
+  margin: 0;
+  color: rgba(0, 0, 0, .85);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px
+}
+
+.close-button {
+  color: grey;
+}
+
+.close-button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    max-width: calc(100vw - 16px);
+    margin: 8px auto;
+  }
+}
